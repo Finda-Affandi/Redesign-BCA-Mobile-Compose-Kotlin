@@ -8,10 +8,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Card
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -66,96 +63,109 @@ fun Ellipse() {
             .shadow(7.dp, shape = RoundedCornerShape(16.dp))
             .clip(shape = RoundedCornerShape(16.dp))){}
 
-    Card(
-        backgroundColor = Color(0xff1763ce),
+    Button(
+        onClick = { },
+        shape = RoundedCornerShape(12.dp),
+        colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xff1763ce)),
         modifier = Modifier
             .padding(30.dp, 181.dp, 169.dp, 553.dp)
-            .width(width = 161.dp)
-            .height(height = 66.dp)
             .shadow(5.dp, shape = RoundedCornerShape(12.dp))
-            .clip(shape = RoundedCornerShape(12.dp))){}
+            .width(width = 161.dp)
+            .height(height = 66.dp)){}
 
-    Card(
-        backgroundColor = Color(0xfff8fbff),
+    Button(
+        onClick = { },
+        shape = RoundedCornerShape(12.dp),
+        colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xfff8fbff)),
         modifier = Modifier
             .padding(16.dp, 300.dp, 274.dp, 430.dp)
             .shadow(5.dp, shape = RoundedCornerShape(12.dp))
-            .size(size = 70.dp)
-            .clip(shape = RoundedCornerShape(12.dp))){}
+            .size(size = 70.dp)){}
 
-    Card(
-        backgroundColor = Color(0xfff8fbff),
+    Button(
+        onClick = { },
+        shape = RoundedCornerShape(12.dp),
+        colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xfff8fbff)),
         modifier = Modifier
             .padding(102.dp, 300.dp, 188.dp, 430.dp)
             .shadow(5.dp, shape = RoundedCornerShape(12.dp))
-            .size(size = 70.dp)
-            .clip(shape = RoundedCornerShape(12.dp))){}
+            .size(size = 70.dp)){}
 
-    Card(
-        backgroundColor = Color(0xfff8fbff),
+    Button(
+        onClick = { },
+        shape = RoundedCornerShape(12.dp),
+        colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xfff8fbff)),
         modifier = Modifier
             .padding(188.dp, 300.dp, 102.dp, 430.dp)
             .shadow(5.dp, shape = RoundedCornerShape(12.dp))
-            .size(size = 70.dp)
-            .clip(shape = RoundedCornerShape(12.dp))){}
+            .size(size = 70.dp)){
 
-    Card(
-        backgroundColor = Color(0xfff8fbff),
+    }
+
+    Button(
+        onClick = { },
+        shape = RoundedCornerShape(12.dp),
+        colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xfff8fbff)),
         modifier = Modifier
             .padding(274.dp, 300.dp, 16.dp, 430.dp)
             .shadow(5.dp, shape = RoundedCornerShape(12.dp))
-            .size(size = 70.dp)
-            .clip(shape = RoundedCornerShape(12.dp))){}
+            .size(size = 70.dp)){}
 
-    Card(
-        backgroundColor = Color(0xfff8fbff),
+    Button(
+        onClick = { },
+        shape = RoundedCornerShape(12.dp),
+        colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xfff8fbff)),
         modifier = Modifier
             .padding(16.dp, 389.dp, 274.dp, 341.dp)
             .shadow(5.dp, shape = RoundedCornerShape(12.dp))
-            .size(size = 70.dp)
-            .clip(shape = RoundedCornerShape(12.dp))){}
+            .size(size = 70.dp)){}
 
-    Card(
-        backgroundColor = Color(0xfff8fbff),
+    Button(
+        onClick = { },
+        shape = RoundedCornerShape(12.dp),
+        colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xfff8fbff)),
         modifier = Modifier
             .padding(102.dp, 389.dp, 188.dp, 341.dp)
             .shadow(5.dp, shape = RoundedCornerShape(12.dp))
-            .size(size = 70.dp)
-            .clip(shape = RoundedCornerShape(12.dp))){}
+            .size(size = 70.dp)){}
 
-    Card(
-        backgroundColor = Color(0xfff8fbff),
+    Button(
+        onClick = { },
+        shape = RoundedCornerShape(12.dp),
+        colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xfff8fbff)),
         modifier = Modifier
             .padding(188.dp, 389.dp, 102.dp, 341.dp)
             .shadow(5.dp, shape = RoundedCornerShape(12.dp))
-            .size(size = 70.dp)
-            .clip(shape = RoundedCornerShape(12.dp))){}
+            .size(size = 70.dp)){}
 
-    Card(
-        backgroundColor = Color(0xfff8fbff),
+    Button(
+        onClick = { },
+        shape = RoundedCornerShape(12.dp),
+        colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xfff8fbff)),
         modifier = Modifier
             .padding(274.dp, 389.dp, 16.dp, 341.dp)
             .shadow(5.dp, shape = RoundedCornerShape(12.dp))
-            .size(size = 70.dp)
-            .clip(shape = RoundedCornerShape(12.dp))){}
+            .size(size = 70.dp)){}
 
-    Card(
-        backgroundColor = Color(0xfff8fbff),
+    Button(
+        onClick = { },
+        shape = RoundedCornerShape(10.dp),
+        colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xfff8fbff)),
         modifier = Modifier
+            .shadow(3.dp, shape = RoundedCornerShape(10.dp))
             .padding(16.dp, 523.dp, 16.dp, 211.dp)
-            .shadow(3.dp, shape = RoundedCornerShape(10.dp))
             .width(width = 328.dp)
-            .height(height = 66.dp)
-            .clip(shape = RoundedCornerShape(10.dp))){}
+            .height(height = 66.dp)){}
 
-    Card(
-        backgroundColor = Color(0xfff8fbff),
+    Button(
+        onClick = { },
+        shape = RoundedCornerShape(10.dp),
+        colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xfff8fbff)),
         modifier = Modifier
-            .padding(16.dp, 600.dp, 16.dp, 134.dp)
             .shadow(3.dp, shape = RoundedCornerShape(10.dp))
+            .padding(16.dp, 600.dp, 16.dp, 134.dp)
             .width(width = 328.dp)
-            .height(height = 66.dp)
-            .clip(shape = RoundedCornerShape(10.dp))){}
+            .height(height = 66.dp)){}
 
     Card(
         backgroundColor = Color(0xff1763ce),

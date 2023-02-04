@@ -30,7 +30,7 @@ class HomeActivity : AppCompatActivity() {
                 ) {
                     val username = getIntent().getStringExtra("username") ?: ""
 //                    Greeting("Android")
-                    Ellipse()
+                    Home()
                 }
             }
         }
@@ -43,7 +43,7 @@ class HomeActivity : AppCompatActivity() {
 //}
 
 @Composable
-fun Ellipse() {
+fun Home() {
 
     Image(
         painter = painterResource(id = R.drawable.header),
@@ -196,6 +196,6 @@ fun Ellipse() {
 fun DefaultPreview() {
     PAM_ActivityTheme {
 //        Greeting("Android")
-        Ellipse()
+        Home()
     }
 }

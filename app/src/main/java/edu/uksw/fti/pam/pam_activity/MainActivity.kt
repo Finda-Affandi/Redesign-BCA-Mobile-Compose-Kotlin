@@ -53,13 +53,13 @@ fun LoginForm() {
     ) {
         TextField(
             value = usernameInput,
-            onValueChange = {},
+            onValueChange = { usernameInput = it },
             label = { Text(text = "Username")},
             modifier = Modifier.fillMaxWidth(),
         )
         TextField(
             value = passwordInput,
-            onValueChange = {},
+            onValueChange = { passwordInput = it },
             label = { Text(text = "Password")},
             visualTransformation = PasswordVisualTransformation(),
             modifier = Modifier.fillMaxWidth(),

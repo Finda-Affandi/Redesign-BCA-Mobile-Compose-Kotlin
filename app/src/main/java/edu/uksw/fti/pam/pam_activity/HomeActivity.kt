@@ -3,22 +3,19 @@ package edu.uksw.fti.pam.pam_activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.layout
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.google.android.material.navigation.NavigationBarMenu
 import edu.uksw.fti.pam.pam_activity.ui.theme.PAM_ActivityTheme
 
 class HomeActivity : AppCompatActivity() {
@@ -47,11 +44,12 @@ class HomeActivity : AppCompatActivity() {
 
 @Composable
 fun Ellipse() {
-    Box(
+
+    Image(
+        painter = painterResource(id = R.drawable.header),
+        contentDescription = null,
         modifier = Modifier
-            .width(width = 360.dp)
-            .height(height = 800.dp)
-            .background(color = Color(0xfff8fbff))
+            .size(360.dp, 800.dp)
     )
 
     Card(
@@ -61,17 +59,20 @@ fun Ellipse() {
             .width(width = 328.dp)
             .height(height = 92.dp)
             .shadow(7.dp, shape = RoundedCornerShape(16.dp))
-            .clip(shape = RoundedCornerShape(16.dp))){}
+            .clip(shape = RoundedCornerShape(16.dp))){
 
-    Button(
-        onClick = { },
-        shape = RoundedCornerShape(12.dp),
-        colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xff1763ce)),
-        modifier = Modifier
-            .padding(30.dp, 181.dp, 169.dp, 553.dp)
-            .shadow(5.dp, shape = RoundedCornerShape(12.dp))
-            .width(width = 161.dp)
-            .height(height = 66.dp)){}
+        Button(
+            onClick = { },
+            shape = RoundedCornerShape(12.dp),
+            colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xff1763ce)),
+            modifier = Modifier
+                .padding(14.dp, 13.dp, 153.dp, 13.dp)
+                .shadow(5.dp, shape = RoundedCornerShape(12.dp))
+                .width(width = 161.dp)
+                .height(height = 66.dp)){}
+    }
+
+
 
     Button(
         onClick = { },
@@ -172,13 +173,25 @@ fun Ellipse() {
         modifier = Modifier
             .padding(0.dp, 730.dp, 0.dp, 0.dp)
             .width(width = 360.dp)
-            .height(height = 70.dp)){}
+            .height(height = 70.dp)
+            .shadow(7.dp)){    }
 
-    }
+    Button(
+        onClick = { },
+        colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xff1763ce)),
+        shape = CircleShape,
+        modifier = Modifier
+            .size(80.dp)
+            .padding(140.dp, 704.dp, 140.dp, 16.dp)
+            .shadow(3.dp, shape = CircleShape)
+    ) {}
+
+
+}
 
 
 
-@Preview(showBackground = true)
+@Preview(showBackground = false, widthDp = 360, heightDp = 800)
 @Composable
 fun DefaultPreview() {
     PAM_ActivityTheme {

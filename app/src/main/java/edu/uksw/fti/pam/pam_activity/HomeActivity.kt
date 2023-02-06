@@ -151,7 +151,7 @@ fun Home() {
                             Row(
                             ) {
                                 Text(
-                                    text = "Rps",
+                                    text = "Rp",
                                     fontWeight = FontWeight.Light,
                                     fontSize = 14.sp,
                                     modifier = Modifier

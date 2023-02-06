@@ -15,9 +15,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.LineHeightStyle
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import edu.uksw.fti.pam.pam_activity.ui.theme.PAM_ActivityTheme
 
 class HomeActivity : AppCompatActivity() {
@@ -62,6 +65,7 @@ fun Home() {
     ) {
         Row(
             modifier = Modifier
+                .padding(top = 12.dp)
                 .fillMaxWidth()
                 .height(135.dp)
         ) {
@@ -77,6 +81,16 @@ fun Home() {
                             .fillMaxWidth()
                     ) {
                         Image(
+                            painter = painterResource(id = R.drawable.icon_notification),
+                            contentDescription = null,
+                            modifier = Modifier
+                                .padding(top = 7.dp, end = 5.dp)
+                                .width(40.dp)
+                                .height(40.dp)
+                                .clip(CircleShape)
+                        )
+
+                        Image(
                             painter = painterResource(id = R.drawable.profile_photo),
                             contentDescription = null,
                             modifier = Modifier
@@ -84,6 +98,16 @@ fun Home() {
                                 .height(50.dp)
                                 .clip(CircleShape)
                         )
+                    }
+                }
+                
+                Column() {
+                    Row(
+                        horizontalArrangement = Arrangement.End,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                    ) {
+                        Text(text = "Williard Towsend", fontWeight = FontWeight.SemiBold, fontSize = 20.sp, color = Color(0xfff8fbff))
                     }
                 }
             }
@@ -114,7 +138,29 @@ fun Home() {
                             .padding(14.dp, 13.dp, 153.dp, 13.dp)
                             .shadow(5.dp, shape = RoundedCornerShape(12.dp))
                             .width(width = 161.dp)
-                            .height(height = 66.dp)){}
+                            .height(height = 66.dp)){
+                        
+                        Column() {
+                            Row(
+                                horizontalArrangement = Arrangement.Start,
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                                Text(text = "Saldo Anda", textAlign = TextAlign.Left, fontSize = 12.sp, fontWeight = FontWeight.Medium)
+                            }
+
+                            Row(
+                            ) {
+                                Text(
+                                    text = "Rp",
+                                    fontWeight = FontWeight.Light,
+                                    fontSize = 14.sp,
+                                    modifier = Modifier
+                                        .padding(top = 5.dp)
+                                    )
+                                Text(text = "10.000.500,00", fontWeight = FontWeight.Bold, fontSize = 18.sp)
+                            }
+                        }
+                    }
                 }
             }
         }

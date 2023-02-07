@@ -49,34 +49,37 @@ fun LoginForm() {
         modifier = Modifier
             .fillMaxSize()
             .padding(20.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         TextField(
-            value = usernameInput,
+            value = usernameInput.toString(),
             onValueChange = { usernameInput = it },
-            label = { Text(text = "Username")},
+            label = { Text(text = "Username") },
             modifier = Modifier.fillMaxWidth(),
         )
         TextField(
-            value = passwordInput,
+            value = passwordInput.toString(),
             onValueChange = { passwordInput = it },
-            label = { Text(text = "Password")},
+            label = { Text(text = "Password") },
             visualTransformation = PasswordVisualTransformation(),
             modifier = Modifier.fillMaxWidth(),
         )
         Button(
             onClick = {
-                val isAuthenticated = doAuth(usernameInput, passwordInput)
-                if (isAuthenticated)
-                    Intent(lContext, HomeActivity::class.java)
-                        .apply { putExtra("username", usernameInput)
-                        }
+                val isAuthtenticated = doAuth(usernameInput, passwordInput)
+                if (isAuthtenticated) {
+                    lContext.startActivity(
+                        Intent(lContext, HomeActivity::class.java)
+                            .apply {
+                                putExtra("username", usernameInput)
+                            }
+                    )
+                }
             }
-        ){
+        ) {
             Text(text = "Login")
         }
     }
-
 }
 
 @Preview(showBackground = true)
@@ -86,4 +89,3 @@ fun LoginFormPreview() {
         LoginForm()
     }
 }
-

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PAM_Activity</string>
+    <string name="username">Nama Pengguna</string>
+    <string name="password">Kata Kunci</string>
+</resources>
